@@ -4,6 +4,55 @@ Nexora Scheduler is an Azure Foundry multi-agent planning assistant designed to 
 
 The tool reads a user’s uploaded Google Calendar export, identifies available time blocks, and generates a Monday-to-Sunday plan that respects existing calendar commitments. It uses specialised Azure Foundry agents for scheduling, training, and meal planning, then presents the result through a modern dashboard with charts, weekly reports, daily views, and a copilot chat interface.
 
+## How to Run the App
+
+### 1. Install dependencies
+
+First, install the required Python packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Create a .env file
+
+Create a .env file in the root directory of the project and add your Azure Foundry project endpoint and agent IDs.
+
+```
+FOUNDRY_PROJECT_ENDPOINT=https://YOUR-RESOURCE.services.ai.azure.com/api/projects/YOUR-PROJECT
+
+SCHEDULER_AGENT_ID=asst_your_scheduler_agent_id
+TRAINER_AGENT_ID=asst_your_trainer_agent_id
+DIETICIAN_AGENT_ID=asst_your_dietician_agent_id
+```
+
+Replace the placeholder values with your own Azure Foundry details:
+
+- FOUNDRY_PROJECT_ENDPOINT — your Azure Foundry project endpoint
+- SCHEDULER_AGENT_ID — the agent ID for the scheduler/orchestrator agent
+- TRAINER_AGENT_ID — the agent ID for the personal trainer agent
+- DIETICIAN_AGENT_ID — the agent ID for the dietician/meal planning agent
+
+### 3. Login to Azure
+
+This app uses Azure Foundry Agents, so you need to authenticate with your Azure account before running it.
+
+Make sure Azure CLI is installed, then run:
+
+```bash
+az login
+```
+
+After logging in, select the Azure subscription that contains your Azure Foundry project and agents.
+
+### 4. Run the Streamlit app
+
+Start the application with:
+
+```bash
+streamlit run app.py
+```
+
 ---
 
 ## What Nexora Scheduler Does
