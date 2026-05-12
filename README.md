@@ -1,6 +1,6 @@
-# Nexora Scheduler
+# Nexora Scholar
 
-Nexora Scheduler is an Azure Foundry multi-agent planning assistant designed to help busy professionals create realistic weekly plans across work, fitness, meals, recovery, hobbies, and personal wellbeing.
+Nexora Scholar is an Azure Foundry multi-agent planning assistant designed to help busy professionals create realistic weekly plans across work, fitness, meals, recovery, hobbies, and personal wellbeing.
 
 The tool reads a user’s uploaded Google Calendar export, identifies available time blocks, and generates a Monday-to-Sunday plan that respects existing calendar commitments. It uses specialised Azure Foundry agents for scheduling, training, and meal planning, then presents the result through a modern dashboard with charts, weekly reports, daily views, and a copilot chat interface.
 
@@ -21,7 +21,7 @@ Create a .env file in the root directory of the project and add your Azure Found
 ```
 FOUNDRY_PROJECT_ENDPOINT=https://YOUR-RESOURCE.services.ai.azure.com/api/projects/YOUR-PROJECT
 
-SCHEDULER_AGENT_ID=asst_your_scheduler_agent_id
+Scholar_AGENT_ID=asst_your_Scholar_agent_id
 TRAINER_AGENT_ID=asst_your_trainer_agent_id
 DIETICIAN_AGENT_ID=asst_your_dietician_agent_id
 ```
@@ -29,7 +29,7 @@ DIETICIAN_AGENT_ID=asst_your_dietician_agent_id
 Replace the placeholder values with your own Azure Foundry details:
 
 - FOUNDRY_PROJECT_ENDPOINT — your Azure Foundry project endpoint
-- SCHEDULER_AGENT_ID — the agent ID for the scheduler/orchestrator agent
+- Scholar_AGENT_ID — the agent ID for the Scholar/orchestrator agent
 - TRAINER_AGENT_ID — the agent ID for the personal trainer agent
 - DIETICIAN_AGENT_ID — the agent ID for the dietician/meal planning agent
 
@@ -55,9 +55,9 @@ streamlit run app.py
 
 ---
 
-## What Nexora Scheduler Does
+## What Nexora Scholar Does
 
-Nexora Scheduler helps users plan a week ahead by combining:
+Nexora Scholar helps users plan a week ahead by combining:
 
 - Existing calendar commitments
 - Deep work blocks
@@ -78,15 +78,15 @@ The goal is not just to create a to-do list, but to generate a realistic and bal
 
 ### 1. Calendar-Aware Weekly Planning
 
-Users upload a Google Calendar `.ics` file. Nexora Scheduler parses the events, converts them to GMT+8, and identifies available time blocks for the upcoming Monday-to-Sunday week.
+Users upload a Google Calendar `.ics` file. Nexora Scholar parses the events, converts them to GMT+8, and identifies available time blocks for the upcoming Monday-to-Sunday week.
 
 The system preserves existing calendar events and only schedules new activities inside available free blocks.
 
 ### 2. Azure Foundry Multi-Agent Architecture
 
-Nexora Scheduler uses multiple Azure Foundry agents, each responsible for a different planning layer:
+Nexora Scholar uses multiple Azure Foundry agents, each responsible for a different planning layer:
 
-- **Scheduler Agent**  
+- **Scholar Agent**  
   Creates the final weekly schedule while respecting calendar constraints.
 
 - **Trainer Agent**  
@@ -130,7 +130,7 @@ The output includes meal options and macro estimates for protein, carbohydrates,
 
 ### 5. ADHD-Friendly Planning Mode
 
-Nexora Scheduler includes an ADHD-friendly planning option. When enabled, the schedule aims to:
+Nexora Scholar includes an ADHD-friendly planning option. When enabled, the schedule aims to:
 
 - Reduce overwhelm
 - Limit must-do tasks per day
@@ -154,7 +154,7 @@ The app displays the generated plan using a modern dashboard-style interface, in
 
 ### 7. Copilot Chat
 
-After a plan is generated, users can interact with Nexora Scheduler through a chat interface.
+After a plan is generated, users can interact with Nexora Scholar through a chat interface.
 
 Example follow-up requests:
 
@@ -184,7 +184,7 @@ Trainer Agent
         ↓
 Dietician Agent
         ↓
-Scheduler Agent
+Scholar Agent
         ↓
 Dashboard + Weekly Report + Daily View + Copilot Chat
         ↓
