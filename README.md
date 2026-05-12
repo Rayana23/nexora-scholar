@@ -1,14 +1,14 @@
-# Nexora Scholar
+# Nexora Scheduler
 
-Nexora Scholar is an Azure Foundry multi-agent planning assistant designed to help busy professionals create realistic weekly plans across work, fitness, meals, recovery, hobbies, and personal wellbeing.
+Nexora Scheduler is an Azure Foundry multi-agent planning assistant designed to help busy professionals create realistic weekly plans across work, fitness, meals, recovery, hobbies, and personal wellbeing.
 
 The tool reads a user’s uploaded Google Calendar export, identifies available time blocks, and generates a Monday-to-Sunday plan that respects existing calendar commitments. It uses specialised Azure Foundry agents for scheduling, training, and meal planning, then presents the result through a modern dashboard with charts, weekly reports, daily views, and a copilot chat interface.
 
 ---
 
-## What Nexora Scholar Does
+## What Nexora Scheduler Does
 
-Nexora Scholar helps users plan a week ahead by combining:
+Nexora Scheduler helps users plan a week ahead by combining:
 
 - Existing calendar commitments
 - Deep work blocks
@@ -29,13 +29,13 @@ The goal is not just to create a to-do list, but to generate a realistic and bal
 
 ### 1. Calendar-Aware Weekly Planning
 
-Users upload a Google Calendar `.ics` file. Nexora Scholar parses the events, converts them to GMT+8, and identifies available time blocks for the upcoming Monday-to-Sunday week.
+Users upload a Google Calendar `.ics` file. Nexora Scheduler parses the events, converts them to GMT+8, and identifies available time blocks for the upcoming Monday-to-Sunday week.
 
 The system preserves existing calendar events and only schedules new activities inside available free blocks.
 
 ### 2. Azure Foundry Multi-Agent Architecture
 
-Nexora Scholar uses multiple Azure Foundry agents, each responsible for a different planning layer:
+Nexora Scheduler uses multiple Azure Foundry agents, each responsible for a different planning layer:
 
 - **Scheduler Agent**  
   Creates the final weekly schedule while respecting calendar constraints.
@@ -81,7 +81,7 @@ The output includes meal options and macro estimates for protein, carbohydrates,
 
 ### 5. ADHD-Friendly Planning Mode
 
-Nexora Scholar includes an ADHD-friendly planning option. When enabled, the schedule aims to:
+Nexora Scheduler includes an ADHD-friendly planning option. When enabled, the schedule aims to:
 
 - Reduce overwhelm
 - Limit must-do tasks per day
@@ -105,7 +105,7 @@ The app displays the generated plan using a modern dashboard-style interface, in
 
 ### 7. Copilot Chat
 
-After a plan is generated, users can interact with Nexora Scholar through a chat interface.
+After a plan is generated, users can interact with Nexora Scheduler through a chat interface.
 
 Example follow-up requests:
 
