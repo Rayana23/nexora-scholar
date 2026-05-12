@@ -14,7 +14,7 @@ from storage_utils import append_history, get_recent_history_text
 
 
 st.set_page_config(
-    page_title="Nexora Scholar",
+    page_title="Nexora Scheduler",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
